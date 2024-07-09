@@ -22,3 +22,11 @@ vim.o.shellpipe = '2>&1 | %{ "$_" } | Tee-Object %s; exit $LastExitCode'
 -- Setting shell quote options
 vim.o.shellquote = ""
 vim.o.shellxquote = ""
+
+vim.diagnostic.config({
+  update_in_insert = false,
+  signs = false,
+  severity_sort = true,
+  virtual_text = false, -- Since we're using lsp_lines
+  virtual_lines = true,
+})
