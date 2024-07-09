@@ -23,9 +23,10 @@ vim.o.shellpipe = '2>&1 | %{ "$_" } | Tee-Object %s; exit $LastExitCode'
 vim.o.shellquote = ""
 vim.o.shellxquote = ""
 
+-- require("lazyvim.util").toggle.diagnostics()
 vim.diagnostic.config({
-  update_in_insert = false,
-  signs = false,
+  update_in_insert = true,
+  signs = true,
   severity_sort = true,
   virtual_text = false, -- Since we're using lsp_lines
   virtual_lines = true,
